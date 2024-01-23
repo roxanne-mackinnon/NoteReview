@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.edit.EditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/textEntryBackground"
+            android:ems="10"
+            android:hint="title hint"
+            android:inputType="textPersonName"
+            android:nextFocusDown="@id/etContent"
+            android:nextFocusForward="@id/etContent"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/etContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/textEntryBackground"
+            android:gravity="top|left"
+            android:hint="content hint"
+            android:nextFocusDown="@id/btnEditUpdateNote"
+            android:nextFocusForward="@id/btnEditUpdateNote"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnEditUpdateNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnEditUpdateNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:isScrollContainer="false"
+            android:nextFocusDown="@id/btnEditUpdateNote"
+            android:text="Save changes"
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconSize="24dp"
+            app:iconTint="@color/teal_200"
+            app:iconTintMode="add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnEditDeleteNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:text="Delete note"
+            app:backgroundTint="@color/design_default_color_error"
+            app:icon="@drawable/trash_can"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditUpdateNote"
+            app:layout_constraintTop_toBottomOf="@+id/etContent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
